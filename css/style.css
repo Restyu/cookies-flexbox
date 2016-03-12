@@ -1,0 +1,403 @@
+/*
+
+  style.css
+
+  Colours
+  =======
+
+    Black: #000000
+    Darker Grey:   #222222
+    Dark Grey:     #333333
+    Gray:          #444444
+    Light Gray:    #eeeeee
+    Light Blue:    #00c0ff
+    Dark Blue:     #0090bf
+
+*/
+
+/* ------------------------
+   General Styles
+   ------------------------ */
+
+html, body {
+   /*height: 100%;*/
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+}
+
+/* ------------------------
+  Typography
+  ------------------------ */
+
+h1, h2, h3 {
+  font-weight: 300;
+  line-height: 45px;
+  margin: 0;
+}
+
+h4, h5, h6 {
+  font-weight: bold;
+  margin: 5px 0 5px 0;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+h5 {
+  font-size: 13px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 10px 0;
+}
+
+p.lead {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+/* ------------------------
+   Layout
+   ------------------------ */
+
+.container {
+  width: 940px;
+  padding: 0 10px 0 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background: #000000;
+}
+
+#logo {
+  flex-direction: row;
+  display: block;
+  margin-top: 5px;
+
+
+}
+
+#hero {
+  background: #00c0ff;
+  color: #000;
+}
+
+#hero-title {
+  width: 520px;
+  padding: 60px 0;
+  flex-direction: column;
+}
+
+#call-to-action {
+  margin: 30px 0 0 0;
+}
+
+#hero-image { /* recordar agregar este id a la imagen */
+  margin: 30px 0 -50px 0;
+  flex-direction: row;
+}
+
+#lead-in {
+  margin-bottom: 40px;
+}
+
+#content {
+  padding: 50px 0;
+}
+
+#column-content {
+  width: 700px;
+  flex-direction: column;
+}
+
+/* ------------------------
+   Sidebar
+   ------------------------ */
+.widget.socials{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+aside {
+  background: #444;
+  width: 160px;
+  color: #fff;
+  margin-left: 20px;
+  padding: 30px;
+  font-size: 12px;
+  line-height: 18px;
+  align-self: flex-start;
+}
+
+aside .widget {
+  margin: 10px 0;
+  flex-direction: column;
+}
+
+aside .widget:nth-child(2) {
+  margin-top: 40px;
+}
+
+aside .widget h4 {
+  font-weight: 200;
+  font-size: 20px;
+  margin: 0 0 10px;
+  margin-right: 60px;
+}
+
+aside .socials a {
+  position: relative;
+  margin-right: 5px;
+  display: block;
+}
+
+aside .socials a:hover {
+  position: relative;
+  top: -1px;
+}
+
+/* ------------------------
+   Secondary Call-to-Action
+   ------------------------ */
+
+#secondary-cta {
+  background: #eee;
+  padding: 30px 0;
+}
+
+#secondary-cta div h4 {
+  flex-direction: row;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+#secondary-cta form {
+  flex-direction: row;
+  margin: 0;
+}
+
+/* ------------------------
+   Footer
+   ------------------------ */
+
+footer {
+  background: #444;
+  color: white;
+  padding: 35px 0;
+}
+
+footer #copyright {
+  flex-direction: row;
+  width: 280px;
+}
+
+footer nav {
+  flex-direction: row;
+  width: 500px;
+
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer nav a {
+  margin: 0 0 0 15px;
+}
+
+footer a:hover {
+  color: #00c0ff;
+}
+
+/* ------------------------
+   Sticky Footer
+   ------------------------ */
+
+#page-wrap {
+  min-height: 100%;
+  /* igual que la altura del height */
+  margin-bottom: -200px;
+}
+
+#page-wrap:after {
+  content:"";
+  display:block;
+}
+
+#foot-wrap, #page-wrap:after {
+  height: 230px;
+}
+
+/* ------------------------
+   Navigation
+   ------------------------ */
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 20px;
+}
+
+header nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 31px;
+  border-left: solid 1px #333;
+  border-right: solid 1px #333;
+}
+
+header nav ul li a:hover {
+  background: #222;
+}
+
+header nav ul li a:active {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8) inset;
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8) inset;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8) inset;
+}
+
+/* ------------------------
+   Buttons
+   ------------------------ */
+
+.btn {
+  width: auto;
+  background: #0090bf;
+  border: 1px solid #1e728c;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+
+  /* IE7 inline-block fix */
+  zoom: 1;
+  *display: inline;
+
+  margin: 0;
+  outline: none;
+  padding: 10px 20px 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+
+  /* sombras para la caja del botón */
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -mox-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+  /* Transiciones CSS3 */
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.bth:hover {
+  color: #fff;
+  background-color: #0086b2;
+}
+
+.btn:active {
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  color: white;
+}
+
+.btn-large {
+  font-size: 24px;
+  font-weight: 200;
+  padding: 20px 30px;
+
+}
+
+.btn-secondary {
+  font-size: 20px;
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active {
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  text-decoration: underline;
+}
+
+.btn-secondary:active {
+  position: relative;
+  top: 1px;
+}
+
+.btn-small {
+  font-weight: bold;
+}
+
+/* ------------------------
+   Global Styles
+   ------------------------ */
+
+input[type="text"], input[type="email"] {
+  /*position: relative;*/
+  padding: 11px 10px;
+  border: 1px solid #ccc;
+  width: 220px;
+  margin: 0 -5px 0 0;
+}
+
+.fa {
+  font-size: 30px;
+  color: #fff;
+}
+
+.columns{
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  margin-right: 20px;
+}
+
+.four {
+  width: 220px;
+}
+
+.last {
+  margin-right: 0;
+}
